@@ -1158,9 +1158,9 @@ fi
 
 # Assign defaults to vzborg conf variables if not defined
 borg_extra=${BORG_EXTRA:-''}
-default_compression=${DEFAULT_COMPRESSION:-'zstd,3'}
+default_compression=${DEFAULT_COMPRESSION:-'lz4'}
 default_keep=${DEFAULT_KEEP:-'--keep-daily=2 --keep-weekly=4 --keep-monthly=12 --keep-yearly=2'}
-default_chunker=${DEFAULT_CHUNKER:-'10,23,16,4095'}
+default_chunker=${DEFAULT_CHUNKER:-'buzhash,19,23,21,4095'}
 encryption_mode=${ENCRYPTION_MODE:-'repokey-blake2'}
 temp_dir=${VZBORG_TEMP_DIR:-'/tmp'}
 qmrestore_delay=${VZBORG_QMRESTORE_DELAY:-'0'}

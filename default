@@ -67,17 +67,11 @@ DEFAULT_KEEP='--keep-daily=2 --keep-weekly=4 --keep-monthly=6 --keep-yearly=2'
 
 # COMPRESSION
 # 
-# Set a default compression
-DEFAULT_COMPRESSION="zstd,3"
+# Set a default compression (borg v1.4.0 default)
+DEFAULT_COMPRESSION="lz4"
 
-# CHUNKER PARAMETERS
-# Borg 1.1 default
-# DEFAULT_CHUNKER='19,23,21,4095'
-# Classic default
-# DEFAULT_CHUNKER='10,23,16,4095'
-# Others options
-# DEFAULT_CHUNKER='10,14,12,4095'
-DEFAULT_CHUNKER='9,16,12,4095'
+# CHUNKER PARAMETERS (borg v1.4.0 default)
+DEFAULT_CHUNKER='buzhash,19,23,21,4095'
 
 # TEMPORARY DIR
 # 
